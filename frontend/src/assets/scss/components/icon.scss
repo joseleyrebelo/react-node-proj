@@ -1,0 +1,30 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  &--refresh {
+    filter: invert(1);
+    background-image: url("../../images/Buttons/refreshing.png");
+  }
+  &--proceed {
+    background-image: url("../../images/Buttons/go_icon.png");
+  }
+  &--facebook {
+    background-image: url("../../images/Footer/facebook_footer.png");
+  }
+  &--twitter {
+    background-image: url("../../images/Footer/twitter_footer.png");
+  }
+  &--spotify {
+    background-image: url("../../images/Footer/spotify_Logo_rgb_white.png");
+  }
+}
+
+a.icon {
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+}

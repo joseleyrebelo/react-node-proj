@@ -1,0 +1,8 @@
+.contain {
+  max-width: 920px; // 30px container fix
+  margin-left: auto;
+  margin-right: auto;
+  &-1140 {
+    max-width: 1140px;
+  }
+}

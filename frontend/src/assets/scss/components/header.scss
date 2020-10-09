@@ -1,0 +1,14 @@
+.header {
+  background: $red;
+  padding: 25px 20px 15px;
+  nav {
+    text-align: center;
+  }
+  .logo {
+    display: inline-block;
+    img {
+      display: inline-block;
+      max-height: 35px;
+    }
+  }
+}

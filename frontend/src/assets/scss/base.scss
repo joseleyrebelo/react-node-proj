@@ -1,0 +1,67 @@
+$red: #f22635;
+
+$font--title: "ApercuPro", sans-serif;
+$font--body: "ApercuPro", sans-serif;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font--title;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+body {
+  font-family: $font--title;
+  font-weight: 400;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: white;
+  &:hover {
+    color: white;
+  }
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .banner {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Keyframe */
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

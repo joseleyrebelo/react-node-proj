@@ -1,0 +1,58 @@
+@mixin viewport-up($breakpoint-name, $breakpoints: null) {
+  @if ($breakpoints==null) {
+    @include media-breakpoint-up($breakpoint-name) {
+      @content;
+    }
+  } @else {
+    @include media-breakpoint-up($breakpoint-name, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+@mixin viewport-down($breakpoint-name, $breakpoints: null) {
+  @if ($breakpoints==null) {
+    @include media-breakpoint-down($breakpoint-name) {
+      @content;
+    }
+  } @else {
+    @include media-breakpoint-down($breakpoint-name, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+@mixin viewport(
+  $main-breakpoint-name,
+  $second-breakpoint-name: null,
+  $breakpoints: null
+) {
+  @if ($second-breakpoint-name==null) {
+    @if ($breakpoints==null) {
+      @include media-breakpoint-only($main-breakpoint-name) {
+        @content;
+      }
+    } @else {
+      @include media-breakpoint-only($main-breakpoint-name, $breakpoints) {
+        @content;
+      }
+    }
+  } @else {
+    @if ($breakpoints==null) {
+      @include media-breakpoint-between(
+        $main-breakpoint-name,
+        $second-breakpoint-name
+      ) {
+        @content;
+      }
+    } @else {
+      @include media-breakpoint-between(
+        $main-breakpoint-name,
+        $second-breakpoint-name,
+        $breakpoints
+      ) {
+        @content;
+      }
+    }
+  }
+}

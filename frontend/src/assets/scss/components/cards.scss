@@ -1,0 +1,19 @@
+.cards {
+  &__holder {
+    max-width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@include viewport-up(md) {
+  .cards {
+    &__holder {
+      max-width: none;
+      margin: -6px -6px;
+      text-align: left;
+    }
+  }
+}
